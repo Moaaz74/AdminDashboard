@@ -1,0 +1,144 @@
+
+table {
+    border-collapse: collapse ;
+    width: 1100px;
+}
+
+tr {
+    border-bottom: 1px solid #d4d4d4;
+}
+
+thead td {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #f9fafb;
+    text-align: left;
+    padding: 15px;
+    border-right: solid 2px white;      
+}
+
+thead td :not(:first-child){
+    border-left: solid 2px white;
+}
+
+
+
+tbody tr td {
+    padding: 10px 15px;
+    border-right: solid 2px white;  
+}
+
+
+
+
+.edit{
+    margin-right: 10px;
+}
+
+.buttonContainer{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.addButton{
+    padding: 10px;
+    background-color: lightblue;
+    border: 1px;
+    border-radius: 5px;
+}
+
+h2{
+	background-color: #004daa;
+}
+
+.login-box {
+	margin-top:220px;
+	margin-left: 500px;
+	width: 1000px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+}
+
+.login-box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.login-box .user-box {
+	position: relative;
+	border-left: solid 2px white;
+}
+
+.login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color:white;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+	}
+.login-box .user-box label {
+	position: absolute;
+	top:0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+	}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #004daa;
+	font-size: 12px;
+	}
+
+.groupLabel{
+	border-left: solid 2px white;
+	margin-bottom: 5px;
+}
+
+.groupLabel label{
+	margin-left: 5px;
+}
+
+.checkboxes{
+	border-bottom: solid 2px white;
+	border-left: solid 2px white;
+}
+
+.checkboxData{
+	margin-left: 10px;
+}
+
+.login-box form .submit {
+	cursor: pointer;
+	margin-top: 50px;
+	margin-left: 400px;
+    width: 100px;
+    background-color: #004daa;
+    height: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-box form .submit:hover{
+	background-color: cyan;
+}
+
+.noPrivileges{
+	margin-left: 5px;
+	width: 500px;
+	background-color: red;
+}
