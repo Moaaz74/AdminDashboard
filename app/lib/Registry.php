@@ -9,7 +9,7 @@ class Registry{
     
     private function __clone() {}
 
-    public function getInstance (){
+    public static function getInstance (){
         if(self::$_instance === null){
             self::$_instance = new self();
         }

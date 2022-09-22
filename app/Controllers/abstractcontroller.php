@@ -16,7 +16,7 @@ class AbstractController{
 
     public function __get($key)
     {
-        $this->_registry->$key;
+        return $this->_registry->$key;
     }
 
     public function notFoundAction(){

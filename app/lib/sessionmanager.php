@@ -68,6 +68,12 @@ class SessionManager extends \SessionHandler{
     }
 
 
+    public function __unset($key)
+    {
+        unset($_SESSION[$key]);    
+    }
+
+
     public function read($id){
         return openssl_decrypt(parent::read($id) , $this->sessionCipherAlgo,$this->sessionCipherKey);
     }
