@@ -4,7 +4,7 @@
     </a>
 </div>
 <div class="board">
-<table width="100%">
+<table class="table table-striped table-bordered table-hover table-striped table-dark ">
     <thead>
         <tr>
             <td>Privilage Name</td>
