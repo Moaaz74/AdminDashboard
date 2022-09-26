@@ -102,8 +102,12 @@ h2{
 	font-size: 12px;
 	}
 
-.groupLabel{
-	border-left: solid 2px white;
+.groupLabel {
+	border-bottom: solid 2px white;
+	margin-bottom: 5px;
+}
+
+.labelName{
 	margin-bottom: 5px;
 }
 
@@ -112,12 +116,17 @@ h2{
 }
 
 .checkboxes{
-	border-bottom: solid 2px white;
-	border-left: solid 2px white;
+	border-bottom: solid 1px white;
+	border-left: solid 1px white;
 }
 
 .checkboxData{
 	margin-left: 10px;
+}
+
+.form-check{
+	margin-left: 5px;
+	margin-bottom: 5px;
 }
 
 .login-box form .submit {
@@ -139,6 +148,11 @@ h2{
 
 .noPrivileges{
 	margin-left: 5px;
+	margin-bottom: 5px;
 	width: 500px;
 	background-color: red;
+}
+
+h2 {
+	text-align: center;
 }
