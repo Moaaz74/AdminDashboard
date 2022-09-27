@@ -1,5 +1,5 @@
 <div class="buttonContainer">
-    <a  class="addButton" href="/usersgroups/add">  
+    <a class="addButton" href="/usersgroups/add">  
     <i class='bx bx-plus'></i> Add New Group
     </a>
 </div>
