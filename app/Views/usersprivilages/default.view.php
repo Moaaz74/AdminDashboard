@@ -1,10 +1,12 @@
+
+
 <div class="buttonContainer">
     <a  class="addButton" href="/usersprivilages/add">  
     <i class='bx bx-plus'></i> Add New Privilage
     </a>
 </div>
 <div class="board">
-<table class="table table-striped table-bordered table-hover table-striped table-dark ">
+<table class="table table-striped table-bordered table-hover table-striped table-dark table-responsive">
     <thead>
         <tr>
             <td>Privilage Name</td>

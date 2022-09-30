@@ -32,7 +32,8 @@ class Messanger {
         }
         $msgs = $this->_session->messages;
         $msgs[] = [$message,$type];
-        $this->_session->messages[] = $msgs;
+        var_dump($msgs);
+        $this->_session->messages = $msgs;
         unset($msgs);
     }
 

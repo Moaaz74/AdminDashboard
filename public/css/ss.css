@@ -156,3 +156,20 @@ h2{
 h2 {
 	text-align: center;
 }
+
+.form-control{
+	margin-bottom: 10px;
+}
+
+span{
+	margin-bottom: 10px;
+}
+
+button{
+	margin-top: 10px;
+}
+
+.path{
+	color: blue;
+	font-weight: bold;
+}

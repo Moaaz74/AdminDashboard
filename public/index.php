@@ -2,7 +2,9 @@
 namespace PHPMVC;
 
 use PDO;
+use PHPMVC\LIB\Dictionary;
 use PHPMVC\LIB\front_controller;
+use PHPMVC\LIB\Language;
 use PHPMVC\LIB\Messanger;
 use PHPMVC\LIB\Registry;
 use PHPMVC\LIB\SessionManager;
@@ -26,11 +28,15 @@ $messanger = Messanger::getInstance($session);
 
 $template = new Template($template_parts);
 
+$dictionary = new Dictionary();
+
 $registry = Registry::getInstance();
 
 $registry->session = $session;
 
 $registry->messanger = $messanger;
+
+$registry->dictionary = $dictionary;
 
 $front_controller = new front_controller($template , $registry);
 $front_controller->dispatch();

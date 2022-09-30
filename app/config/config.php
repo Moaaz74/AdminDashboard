@@ -1,5 +1,6 @@
 <?php
 
+use PHPMVC\LIB\Dictionary;
 
 if(!defined('DS')) define('DS' , DIRECTORY_SEPARATOR);// directory separator ''
 
@@ -8,6 +9,7 @@ define('CONTROLLER_PATH' , 'C:\xampp\htdocs\EStore Project\app\Controllers');
 define('MODELS_PATH' , 'C:\xampp\htdocs\EStore Project\app\Models');
 define('VIEWS_PATH' , APP_PATH . DS . 'views' . DS);
 define('TEMPLATE_PATH' , APP_PATH . DS . 'templates' . DS);
+define('DICTIONARY_PATH' , APP_PATH . DS . 'dictionary' . DS);
 define('CSS', '/css/');
 define('JS', '/js/');
 

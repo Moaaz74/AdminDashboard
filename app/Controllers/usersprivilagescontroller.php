@@ -13,11 +13,13 @@ class UsersPrivilagesController extends AbstractController{
     use Helper;
 
     public function defaultAction(){
+        $this->dictionary->load('usersprivilages.default');
         $this->_data['privilages'] = UserPrivilageModel::getAll();
         $this->_view();
     }
 
     public function addAction(){
+        $this->dictionary->load('usersprivilages.add');
         if(isset($_POST['submit'])){
             $privilage = new UserPrivilageModel();
             $privilage->PrivilageTitle = $this->filterString($_POST['PrivilageTitle']);
@@ -38,7 +40,7 @@ class UsersPrivilagesController extends AbstractController{
         if($privilage === false){
             $this->redirect('/usersprivilages/default');
         }
-
+        $this->dictionary->load('usersprivilages.edit');
         $this->_data['privilage'] = $privilage;
 
         if(isset($_POST['submit'])){

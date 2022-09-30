@@ -15,7 +15,7 @@ class front_controller{
     private $_template;
     private $_registry;
 
-    public function __construct(Template $template , Registry $registry)
+    public function __construct(Template $template  , Registry $registry)
     {
         $this->_template = $template;
         $this->_registry = $registry;
@@ -48,8 +48,6 @@ class front_controller{
         }
         $controller = new $controller_class_name;
         
-        $GLOBALS['home'] =  $this->_controller;
-        $GLOBALS['action'] = $this->_action;
         
         $controller->setController($this->_controller);
         $controller->setAction($this->_action);

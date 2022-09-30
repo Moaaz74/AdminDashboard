@@ -2,9 +2,11 @@
 namespace PHPMVC\Controllers;
 
 use PHPMVC\LIB\front_controller;
-
+use PHPMVC\LIB\Validate;
 
 class AbstractController{
+
+    use Validate;
 
     protected $_controller='index';
     protected $_action='default';
@@ -41,6 +43,7 @@ class AbstractController{
         $this->_template=$template;
     }
 
+
     public function setRegistry ($registry){
         $this->_registry=$registry;
     }
@@ -50,6 +53,7 @@ class AbstractController{
         if($this->_action == front_controller::NOT_FOUND_ACTION || !file_exists($view)){
             $view = VIEWS_PATH . 'notFound' . DS . 'notfound.view.php';
         } 
+        $this->_data = array_merge($this->_data , $this->dictionary->getDictionary());
         $this->_template->setRegistry($this->_registry);
         $this->_template->setActionViewFile($view);
         $this->_template->setAppData($this->_data);

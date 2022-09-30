@@ -4,7 +4,7 @@
     </a>
 </div>
 <div class="board">
-<table class="table table-striped table-bordered table-hover table-striped table-dark " >
+<table class="table table-striped table-bordered table-hover table-striped table-dark table-responsive" >
     <thead>
         <tr>
             <td>Group Name</td>

@@ -14,12 +14,13 @@ class UsersGroupsController extends AbstractController{
     use Helper;
     
     public function defaultAction(){
+        $this->dictionary->load('usersgroups.default');
         $this->_data['groups'] = UserGroupModel::getAll();
         $this->_view();
     }
 
     public function addAction(){
-        
+        $this->dictionary->load('usersgroups.add');
         $this->_data['privilages'] = UserPrivilageModel::getAll();
         if(isset($_POST['submit'])){
             $group = new UserGroupModel();
@@ -48,20 +49,11 @@ class UsersGroupsController extends AbstractController{
         if($group === false){
             $this->redirect('/usersgroups/default');
         }
-
+        $this->dictionary->load('usersgroups.edit');
         $this->_data['group'] = $group;
         $this->_data['privilages'] = UserPrivilageModel::getAll();
-        $groupPrivilages = UserGroupPrivilageModel::getBy(['GroupId' => $group->GroupId]);
-        $selectedGroupPrivilagesIds = [];
 
-
-        if($groupPrivilages !== false){
-            foreach($groupPrivilages as $groupPrivilage){
-                $selectedGroupPrivilagesIds[] = $groupPrivilage->PrivilageId;
-            }
-        }
-
-        $this->_data['groupPrivilages'] = $selectedGroupPrivilagesIds;
+        $this->_data['groupPrivilages'] = $selectedGroupPrivilagesIds = UserGroupPrivilageModel::getGroupPrivilages($group);
 
         if(isset($_POST['submit'])){
             $groupName = $this->filterString($_POST['GroupName']);
